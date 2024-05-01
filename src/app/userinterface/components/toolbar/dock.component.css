@@ -2,22 +2,39 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 10px;
     display: flex;
     justify-content: center;
+    
 }
 
 .dock {
+    transition: .1s;
     display: flex;
+    justify-content: center;
+    background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1.5px );
+-webkit-backdrop-filter: blur( 1.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 }
+
 
 .dock-icon {
     width: 64px;
     height: 64px;
-    outline: solid 1px #fff;
     color: #fff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    transform-origin: center bottom;
+    transition: .3s transform transform-origin;
+}
+
+.dock.animated .dock-icon{
+    transition: .3s;
+    transition-property: transform  transform-origin;
 }

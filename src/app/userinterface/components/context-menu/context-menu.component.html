@@ -1,0 +1,111 @@
+
+<div #contextMenu class="wrapper">
+    <div class="content">
+        <ul class="menu">
+            <li class="item btn-sub_menu">
+                <div class="item-btn">
+                    <img class="svg" src="../../../../assets/icons/collage-frame.svg">
+                    <span>Affichage</span>
+                </div>
+                <img class="svg svg-minus" src="../../../../assets/icons/nav-arrow-right.svg">
+                <ul class="sub_menu" #subMenu>
+                    <li class="item" [ngClass]="{active: settings.getDisplayIconSize() =='large'}" (click)="settings.setDisplayIconSize('large')">
+                        <img class="svg" src="../../../../assets/icons/plus.svg">
+                        <span>Grandes icônes</span>
+                    </li>
+                    <li class="item" [ngClass]="{active: settings.getDisplayIconSize() == 'moyen'}" (click)="settings.setDisplayIconSize('moyen')">
+                        <img class="svg" src="../../../../assets/icons/3d-select-solid.svg">
+                        <span>Icônes moyennes</span>
+                    </li>
+                    <li class="item" [ngClass]="{active: settings.getDisplayIconSize() == 'small'}" (click)="settings.setDisplayIconSize('small')">
+                        <img class="svg" src="../../../../assets/icons/minus.svg">
+                        <span>Petites icônes</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="item btn-sub_menu">
+                <div class="item-btn">
+                    <img class="svg" src="../../../../assets/icons/data-transfer-both.svg">
+                    <span>Tier par</span>
+                </div>
+                <img class="svg svg-minus" src="../../../../assets/icons/nav-arrow-right.svg">
+                <ul class="sub_menu" #subMenu>
+                    <li class="item" [ngClass]="{active: settings.getFilterIcon() == 'nom'}" (click)="settings.setFilterIcon('nom')">
+                        <span>Nom</span>
+                    </li>
+                    <li class="item" [ngClass]="{active: settings.getFilterIcon() == 'taille'}" (click)="settings.setFilterIcon('taille')">
+                        <span>Taille</span>
+                    </li>
+                    <li class="item" [ngClass]="{active: settings.getFilterIcon() == 'type'}" (click)="settings.setFilterIcon('type')">
+                        <span>Type d'élément</span>
+                    </li>
+                    <li class="item" [ngClass]="{active: settings.getFilterIcon() == 'date'}" (click)="settings.setFilterIcon('date')">
+                        <span>Modifié le</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <img class="svg " src="../../../../assets/icons/refresh.svg">
+                <span>Actualiser</span>
+            </li>
+            </ul>
+            <ul class="menu">
+            <div class="part-menu item-btn">
+                <li class="item btn-sub_menu">
+                    <div class="item-btn">
+                        <img class="svg" src="../../../../assets/icons/redo.svg">
+                        <span>Annuler</span>
+                    </div>
+                    <p class="shortcut">Ctrl-Z</p>
+                </li>
+                
+            </div>
+            <li class="item btn-sub_menu">
+                <div class="item-btn">
+                    <img class="svg" src="../../../../assets/icons/undo.svg">
+                    <span>Répéter</span>
+                </div>
+                <p class="shortcut">Ctrl-Y</p>
+            </li>
+            <li class="item btn-sub_menu">
+                <div class="item-btn">
+                    <img class="svg" src="../../../../assets/icons/add-circled-outline.svg">
+                    <span>Nouveau</span>
+                </div>
+                <img class="svg svg-minus" src="../../../../assets/icons/nav-arrow-right.svg">
+                <ul class="sub_menu" #subMenu>
+                    <li class="item" (click)="newFolderAction()">
+                        <img class="svg" src="../../../../assets/icons/add-folder.svg">
+                        <span>Dossier</span>
+                    </li>
+                    <li class="item" (click)="newFileAction()">
+                        <img class="svg" src="../../../../assets/icons/empty-page.svg">
+                        <span>Document Texte</span>
+                    </li>
+                    <li class="item">
+                        <img class="svg" src="../../../../assets/icons/forward-outline.svg">
+                        <span>Nouveau raccourcie</span>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+            <ul class="menu">
+                <div class="part-menu">
+                    <li class="item">
+                        <img class="svg" src="../../../../assets/icons/laptop-fix.svg">
+                        <span>Paramètres d'affichage</span>
+                    </li>
+                </div>
+                <li class="item">
+                    <img class="svg" src="../../../../assets/icons/edit-pencil.svg">
+                    <span>Personnaliser</span>
+                </li>
+            </ul>
+        <div class="part-menu">
+            <li class="item">
+                <img class="svg" src="../../../../assets/icons/mac-option-key.svg">
+                <span>Afficher d'autres options</span>
+            </li>
+        </div>
+    </div>
+</div>

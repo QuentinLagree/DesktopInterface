@@ -1,0 +1,7 @@
+<div class="desktop" [ngClass]="settings.getDisplayIconSize()" #desktop__container>
+    <div class="desktop__icon"  *ngFor="let index of getValues(settings.ElementsOfDesktop)">
+        <div class="desktop__icon-container" *ngIf="settings.ElementsOfDesktop.get(index)?.getType() != 'null'">
+            <img [src]="settings.ElementsOfDesktop.get(index)?.icon" alt="Imagedefichier">
+            <span #nameInput spellcheck="false" (keyup)="methodFocusSpan(nameInput.innerHTML)" contenteditable class="name">{{settings.ElementsOfDesktop.get(index)?.name + " " + index.toString()}}</span></div>
+    </div>
+</div>

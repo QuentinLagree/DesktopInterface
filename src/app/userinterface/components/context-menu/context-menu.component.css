@@ -1,0 +1,93 @@
+.wrapper {
+    position: absolute;
+    visibility: hidden;
+    transform: scale(0);
+    transform-origin: left top;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: sans-serif;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: .2s transform;
+}
+
+.wrapper .menu {
+    padding: 10px 12px;
+}
+
+.content .item {
+     list-style: none;
+     font-size: 15px;
+     height: 35px;
+     display: flex;
+     flex-direction: row;
+     width: 100%; 
+     padding: 0 5px 0 10px;
+     cursor: pointer;
+     align-items: center;
+     border-radius: 5px;
+     color: #21272A;
+     margin-bottom: 2px;
+}
+
+
+.item-btn {
+    display: flex;
+    align-items: center;
+}
+
+.item.active span {
+    font-weight: 600;
+}
+img.svg{
+    width:  16px;
+}
+
+img.svg.svg-minus{
+    width:  14px;
+}
+
+.content .item:hover {
+    background-color: #ececec;
+
+}
+
+.content .item span {
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.content .part-menu {
+    display: flex;
+    margin-top: -8px;
+    padding:  3px 0;
+    border-top: 1px solid #ccc;
+}
+
+.content .btn-sub_menu {
+    position: relative;
+    justify-content: space-between;
+}
+
+.btn-sub_menu .sub_menu {
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    right: -200px;
+    padding: 13px; 
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    top: -35px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+}
+
+.btn-sub_menu:hover .sub_menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu .shortcut {
+    font-size: 0.7em;
+}

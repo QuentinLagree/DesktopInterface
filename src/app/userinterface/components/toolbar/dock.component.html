@@ -1,11 +1,10 @@
-<div class="docker-wrapper">
-    <div class="dock">
-        <div class="dock-icon">1</div>
-        <div class="dock-icon">2</div>
-        <div class="dock-icon">3</div>
-        <div class="dock-icon">4</div>
-        <div class="dock-icon">5</div>
-        <div class="dock-icon">6</div>
-        <div class="dock-icon">7</div>
+<div style="pointer-events: none;" class="docker-wrapper">
+    <div class="dock" style="pointer-events: all;"  #dock (mousemove)="handleMouseMove($event)" (mouseleave)="handleMouseLeave()" (mouseenter)="handleMouseEnter()" >
+        <dock-icon [type]="this.desktopElements.PROGRAM" [name]="'explorer'" class="dock-icon" [tooltip]="'Finder'" [alt]="'Image de fichiers'"></dock-icon>
+        <dock-icon [type]="this.desktopElements.FOLDER" [name]="'explorer'" [path]="'C:/test'" class="dock-icon" [tooltip]="'Dossier'" [icon]="'folder'" [alt]="'Image de Dossier'"></dock-icon>
+        <dock-icon [type]="this.desktopElements.FOLDER" [name]="'explorer'" [path]="'C:/Jour1'" class="dock-icon" [tooltip]="'Dossier'" [icon]="'folder'" [alt]="'Image de Dossier'"></dock-icon>
+        <dock-icon [type]="this.desktopElements.FOLDER" [name]="'explorer'" [path]="'C:/Ect'" class="dock-icon" [tooltip]="'Dossier'" [icon]="'folder'" [alt]="'Image de Dossier'"></dock-icon>
+        <dock-icon [type]="this.desktopElements.TXT" [name]="'texteditor'" class="dock-icon" [tooltip]="'Editeur de texte'" [icon]="'texteditor'" [alt]="'Image de l\'éditeur de texte'"></dock-icon>
+        <dock-icon [type]="this.desktopElements.FOLDER" [name]="'explorer'" [path]="'C:/Explorer'" class="dock-icon" [tooltip]="'Dossier'" [icon]="'folder'" [alt]="'Image de fichiers'"></dock-icon>
     </div>
 </div>

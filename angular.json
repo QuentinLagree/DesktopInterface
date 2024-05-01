@@ -49,7 +49,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/dock-images"
+              
             ],
             "styles": [
               "src/styles.css"
